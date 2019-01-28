@@ -52,5 +52,4 @@ WORKDIR /app
 COPY index.html /app/index.html
 
 EXPOSE 80 443 2015
-ENTRYPOINT ["/bin/parent"]
-CMD ["/bin/caddy", "--conf=/etc/Caddyfile", "--log=stdout", "--agree=true"]
+CMD ["/bin/parent", "/bin/caddy", "--conf=/etc/Caddyfile", "--log=stdout", "--agree=true"]
